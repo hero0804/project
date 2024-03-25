@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <meta charset ="utf-8">
+    <meta name = "author" content ="test">
+    <title> Main </title>
+    <link rel="stylesheet" href="css/css/main.css">
+ </head>
+ <body>
+   <header>
+      
+      <div id="logo" onclick="slowScroll('#top')">
+         <span>Gylym.ai</span>
+      </div>
+      <div
+         id="about">
+         <a href="#" title="abillities" onclick="slowScroll('#main')">возможности</a>
+         <a href="#" title="about us" onclick="slowScroll('#overiew')">о нас</a>
+         <a href="#" title="contacts" onclick="slowScroll('#contacts')">контакты</a>
+         <a href="#" title="information" onclick="slowScroll('#info')">книги</a>
+      </div>
+      
+   </header>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+   <script>
+      function slowScroll(id){
+         $('html,body').animate({
+          scrollTop: $(id).offset().top
+         },500);
+      }
+
+      $(document).on("scroll", function(){
+        if($(window).scrollTop() === 0)
+          $("header").removeClass("fixed");
+        else
+          $("header").attr("class", "fixed");
+      });
+   </script>
+   <div class = "wrapper">
+      <div class = "menu">
+       <a href="#" class="menu-btn"><ion-icon name="menu-outline"></ion-icon></a>
+         <nav class = "menu-list">
+         <a href = "#">Главная</a>
+         <a href = "#">Каталог</a>
+         <a href = "#">Настройки</a>
+         <a href = "#">Спонсоры</a>
+         </nav>
+      </div>   
+   </div>
+   <script>
+      $('.menu-btn').on('click', function(e) {
+       e.preventDefault();
+       $('.menu').toggleClass('menu_active');
+      })
+   </script>
+   <div class = "wrapper">
+      <div class = "slide">
+       <a href="#" class="menu-button"></a>
+       <nav class = "menu-list1">
+         <form>
+            <textarea placeholder="#" maxlength="#"></textarea>
+            <button type="button">></button>
+            
+         </form>
+       </nav>
+      </div>   
+   </div>
+   <script>
+      $('.menu-button').on('click', function(e) {
+       e.preventDefault();
+       $('.slide').toggleClass('slide_active');
+      })
+   </script>
+   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
