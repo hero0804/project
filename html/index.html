@@ -5,17 +5,22 @@
     <meta name = "author" content ="test">
     <title> Main </title>
     <link rel="stylesheet" href="css/css/main.css">
+    <script src="js.fun/index.js" defer></script>
  </head>
  <body>
    <header>
       
       <div id="logo" onclick="slowScroll('#top')">
-         <span>Gylym.ai</span>
+         <object data="Group 7.svg" type="image/svg+xml">
+            <img src="Group 7.svg" />
+          </object>
       </div>
+
+   
       <div
          id="about">
          <a href="#" title="abillities" onclick="slowScroll('#main')">возможности</a>
-         <a href="#" title="about us" onclick="slowScroll('#overiew')">о нас</a>
+         <a href="#" title="about us" onclick="slowScroll('#overiew')"></ion-icon>о нас</a>
          <a href="#" title="contacts" onclick="slowScroll('#contacts')">контакты</a>
          <a href="#" title="information" onclick="slowScroll('#info')">книги</a>
       </div>
@@ -38,12 +43,12 @@
    </script>
    <div class = "wrapper">
       <div class = "menu">
-       <a href="#" class="menu-btn"><ion-icon name="menu-outline"></ion-icon></a>
+       <a href="#" class="menu-btn"><img src="menu-outline.svg" /></a>
          <nav class = "menu-list">
-         <a href = "#">Главная</a>
-         <a href = "#">Каталог</a>
-         <a href = "#">Настройки</a>
-         <a href = "#">Спонсоры</a>
+         <a href = "#"><ion-icon name="apps-outline"></ion-icon>Главная</a>
+         <a href = "#"><ion-icon name="albums-outline"></ion-icon>Каталог</a>
+         <a href = "#"><ion-icon name="build-outline"></ion-icon>Настройки</a>
+         <a href = "#"><ion-icon name="wallet-outline"></ion-icon>Спонсоры</a>
          </nav>
       </div>   
    </div>
@@ -53,25 +58,80 @@
        $('.menu').toggleClass('menu_active');
       })
    </script>
-   <div class = "wrapper">
-      <div class = "slide">
-       <a href="#" class="menu-button"></a>
-       <nav class = "menu-list1">
-         <form>
-            <textarea placeholder="#" maxlength="#"></textarea>
-            <button type="button">></button>
-            
-         </form>
-       </nav>
-      </div>   
-   </div>
-   <script>
+   <div class="wrapper">
+      <div class="slide">
+          <a href="#" class="menu-button"><img src="svg-editor-image.svg" /></a>
+          <nav class="menu-list1">
+              <form>
+                  <div class="container">
+                      <textarea id="input-field" placeholder="Введите текст сюда..." rows="2" cols="10"></textarea>
+                      <button type="button">></button>
+                  </div>
+              </form>
+          </nav>
+      </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
       $('.menu-button').on('click', function(e) {
-       e.preventDefault();
-       $('.slide').toggleClass('slide_active');
-      })
-   </script>
-   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+          e.preventDefault();
+          $('.slide').toggleClass('slide_active');
+      });
+
+      var message = $('textarea#message_box').val();
+      var button = document.getElementById('btn');
+
+      button.addEventListener('click', function() {
+          console.log(message)
+      });
+  </script>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <div id="container2">
+      <p id="selectable-text">
+          
+В 1939 г., когда стала очевидна перспектива новой мировой войны, группа ученых, которые понимали ее последствия, убедили Эйнштейна преодолеть пацифистские сомнения и поддержать своим авторитетом обращение к президенту Рузвельту с призывом к Соединенным Штатам начать программу ядерных исследований
+Это привело к появлению Манхэттенского проекта и, в конечном счете, бомб, которые взорвались над Хиросимой и Нагасаки в 1945 г. Некоторые люди винят за атомную бомбу Эйнштейна, поскольку он открыл соотношение между массой и энергией, но с тем же успехом можно обвинять Ньютона в крушении самолетов, поскольку он открыл гравитацию. Сам Эйнштейн не принимал никакого участия в Манхэттенском проекте и пришел в ужас от бомбардировки.
+Пророческое письмо, отправленное Эйнштейном президенту Рузвельту в 1939 г.
+«В течение последних четырех месяцев благодаря работам Жолио во Франции, а также Ферми и Сциларда в Америке, вероятно, появилась возможность запуска ядерной цепной реакции в крупной массе урана, вследствие чего может быть высвобождена огромная энергия и получено большое количество элементов, подобных радию. Можно считать почти достоверным, что это удастся реализовать в ближайшем будущем.
+Это новое явление способно также привести к созданию бомб и, что возможно, хотя уверенность в этом меньше, исключительно мощных бомб нового типа».
+Ядерная энергия связи
+Любая разумная научная теория, касается ли она времени или любого другого предмета, должна, по моему мнению, основываться на наиболее работоспособной философии науки — позитивистском подходе, который был разработан Карлом Поппером и другими. Согласно этому образу мысли научная теория — это математическая модель, которая описывает и систематизирует производимые нами наблюдения. Хорошая теория описывает широкий круг явлений на базе нескольких простых постулатов и дает ясные предсказания, которые можно проверить. Если предсказания согласуются с наблюдениями, теория выдерживает испытание, хотя никогда нельзя будет доказать ее правильность. С другой стороны, если наблюдения не соответствуют предсказаниям, придется либо отбросить,
+      </p>
+  </div>
+
+  <button id="send-button" style="display: none;" ></button>
+
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const inputField = document.getElementById('input-field');
+          const selectableText = document.getElementById('selectable-text');
+          let sendButton = null;
+
+          
+          selectableText.addEventListener('mouseup', function(event) {
+              const selectedText = window.getSelection().toString();
+              if (selectedText.length > 0) {
+                  sendButton = document.createElement('button');
+                  sendButton.style.backgroundImage = "url('svg-editor-image.svg')";
+                  sendButton.textContent = 'Объяснить';
+                  sendButton.style.position = 'absolute';
+                  sendButton.style.top = `${event.clientY}px`;
+                  sendButton.style.left = `${event.clientX}px`;
+                  document.body.appendChild(sendButton);
+
+                  sendButton.addEventListener('click', function() {
+                      inputField.value = selectedText;
+                      sendButton.remove();
+                  });
+              } else {
+                  if (sendButton) {
+                      sendButton.remove();
+                  }
+              }
+          });
+      });
+  </script>
 </body>
 </html>
